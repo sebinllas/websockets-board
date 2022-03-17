@@ -10,7 +10,7 @@ var x, y;
 var Linecolor = 'black';
 var lineWidth = '4';
 
-const socket = io('localhost:3001');
+const socket = io('localhost:3000');
 socket.on('connect', () => {
 	console.log('connected to the server');
 });
