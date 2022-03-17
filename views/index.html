@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web sockets board</title>
+
+  <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="bg-slate-800 flex justify-center items-center flex-col text-gray-100">
+  <div class="bg-emerald-700 rounded-3xl p-2 mt-2 shadow-2xl shadow-black">
+    <h1 class="text-3xl rounded-3xl  p-2 w-full text-center">Web sockets Board</h1>
+    <canvas id="canvas" width="700" height="400" class=" rounded-3xl shadow-inner bg-white mt-2 box-content">
+    </canvas>
+    <div class="flex justify-evenly items-center rounded-3xl p-2 mt-2 ">
+      <div class="flex flex-col items-center">
+        <label for="color-input">color</label>
+        <input type="color" name="color" id="color-input">
+      </div>
+      <div class="flex flex-col items-center">
+        <label for="stroke-width-input">grosor</label>
+        <input type="range" min="2" max="10" name="strokeWidth" id="stroke-width-input">
+      </div>
+      <button id='clear-btn'
+        class="text-black bg-gray-300 rounded-xl py-1 border-white border-2 px-2 active:bg-gray-600">limpiar
+        🗑️</button>
+      <button id='save-btn' class=" bg-gray-900 rounded-xl py-1 border-white border-2 px-2 active:bg-gray-600">Guardar
+        💾</button>
+    </div>
+  </div>
+
+  <script type='module' src="./main.js"></script>
+  <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+    integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
